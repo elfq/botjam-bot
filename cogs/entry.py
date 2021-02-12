@@ -25,7 +25,8 @@ class Entry(commands.Cog):
        entry_role = find(lambda r: r.name == 'Entry Ticket', ctx.guild.roles)
        await ctx.author.add_roles(entry_role)
        await ctx.send("✅ Check your roles!")
-       await hook.send(f"✅ Successfully verified `{ctx.author}`\n`{link}`\nhttps://raw.githubusercontent.com/elfq/botjam/main/entries/{link}")
+       await hook.send(f"✅ Successfully verified `{ctx.author}`\n`{link}`\n<https://github.com/elfq/botjam/blob/main/entries/{link}>")
+       
      if f"{ctx.author.id}" not in entries.text:
        await ctx.send(":x: You're not listed as an author for this file.")
   
